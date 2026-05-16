@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About - HH Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&amp;family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-primary": "#b8cda9",
+                        "on-secondary-fixed": "#2e1500",
+                        "secondary-fixed-dim": "#f6bb88",
+                        "stone": "#F0EBE5",
+                        "on-primary-container": "#ddf3cd",
+                        "primary-fixed": "#d4e9c4",
+                        "secondary-fixed": "#ffdcc1",
+                        "deep-loam": "#2C2C24",
+                        "burnt-sienna": "#A85448",
+                        "bark": "#4A4A40",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#0f1f09",
+                        "inverse-surface": "#2f312e",
+                        "tertiary": "#585246",
+                        "surface-container": "#efeeea",
+                        "on-tertiary-container": "#f6ebdc",
+                        "on-secondary-fixed-variant": "#663d15",
+                        "tertiary-fixed-dim": "#cfc5b7",
+                        "secondary-container": "#ffc38f",
+                        "on-tertiary-fixed": "#1f1b12",
+                        "surface-dim": "#dbdad6",
+                        "surface": "#faf9f5",
+                        "pale-mist": "#F3F4F1",
+                        "timber": "#DED8CF",
+                        "tertiary-container": "#716a5e",
+                        "secondary": "#81542b",
+                        "outline-variant": "#c4c8bd",
+                        "surface-container-high": "#e9e8e4",
+                        "primary": "#45573b",
+                        "surface-bright": "#faf9f5",
+                        "background": "#faf9f5",
+                        "dried-grass": "#78786C",
+                        "on-surface": "#1b1c1a",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ebe1d2",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#4c463b",
+                        "on-primary-fixed-variant": "#3a4c30",
+                        "surface-variant": "#e3e2df",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f4f4f0",
+                        "primary-container": "#5d7052",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#794e25",
+                        "surface-container-highest": "#e3e2df",
+                        "outline": "#74786f",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-surface-variant": "#444840",
+                        "surface-tint": "#516447",
+                        "primary-fixed-dim": "#b8cda9",
+                        "inverse-on-surface": "#f2f1ed",
+                        "on-background": "#1b1c1a"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                        "organic-1": "60% 40% 30% 70% / 60% 30% 70% 40%",
+                        "organic-2": "40% 60% 70% 30% / 40% 50% 60% 50%",
+                        "organic-3": "50% 50% 30% 70% / 50% 40% 60% 50%",
+                    },
+                    spacing: {
+                        "section-padding-desktop": "120px",
+                        "unit": "4px",
+                        "section-padding-mobile": "64px",
+                        "gutter": "24px",
+                        "container-max": "1140px"
+                    },
+                    fontFamily: {
+                        "headline-lg": ["Literata", "serif"],
+                        "headline-xl-mobile": ["Literata", "serif"],
+                        "headline-xl": ["Literata", "serif"],
+                        "body-lg": ["Nunito Sans", "sans-serif"],
+                        "label-md": ["Nunito Sans", "sans-serif"],
+                        "headline-md": ["Literata", "serif"],
+                        "body-md": ["Nunito Sans", "sans-serif"]
+                    },
+                    fontSize: {
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-xl-mobile": ["36px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    },
+                    boxShadow: {
+                        'soft-moss': '0 10px 40px -10px rgba(93, 112, 82, 0.08)',
+                        'soft-clay': '0 10px 40px -10px rgba(193, 140, 93, 0.08)',
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Global Noise Texture */
+        .noise-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.04;
+            mix-blend-mode: multiply;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased relative overflow-x-hidden">
+<!-- Global Noise Texture -->
+<div class="noise-overlay"></div>
+<!-- Navigation -->
+<nav class="hidden md:flex fixed top-4 right-4 z-50 items-center gap-6 px-6 py-3 rounded-full max-w-max ml-auto bg-surface/70 backdrop-blur-xl border border-timber/50 shadow-soft-moss">
+<a class="flex items-center justify-center font-headline-md text-headline-md text-white bg-primary rounded-full w-10 h-10 hover:scale-95 transition-transform" href="#home">
+            HH
+        </a>
+<div class="flex gap-6">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#home">Showcase</a>
+<a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1" href="#about">Philosophy</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#works">Patterns</a>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">settings</span>
+</button>
+</nav>
+<!-- Mobile Nav -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 border-t border-timber/30 bg-surface shadow-[0_-8px_30px_rgb(69,87,59,0.08)] rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high p-2 rounded-lg transition-all" href="#home">
+<span class="material-symbols-outlined mb-1">eco</span>
+<span class="font-label-md text-[10px]">Nature</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-6 py-2 scale-95 transition-transform" href="#about">
+<span class="material-symbols-outlined mb-1">category</span>
+<span class="font-label-md text-[10px]">Asymmetry</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high p-2 rounded-lg transition-all" href="#works">
+<span class="material-symbols-outlined mb-1">architecture</span>
+<span class="font-label-md text-[10px]">Craft</span>
+</a>
+</nav>
+<!-- Main Content -->
+<main class="pt-32 pb-section-padding-mobile md:pb-section-padding-desktop px-gutter max-w-container-max mx-auto relative" id="about">
+<!-- Ambient Blobs -->
+<div class="absolute top-20 left-10 w-96 h-96 bg-primary-container/20 rounded-organic-1 blur-3xl -z-10"></div>
+<div class="absolute top-1/2 right-0 w-[500px] h-[500px] bg-secondary-container/20 rounded-organic-2 blur-3xl -z-10"></div>
+<!-- Header -->
+<header class="mb-24 md:pl-12">
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-deep-loam mb-6">
+                Journey &amp; Craft
+            </h1>
+<p class="font-body-lg text-body-lg text-dried-grass max-w-2xl">
+                A non-linear path exploring the intersections of technology, organic design, and human-centric experiences.
+            </p>
+</header>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
+<!-- Left Column: Visual/Polaroid Placeholder -->
+<div class="md:col-span-5 relative flex justify-center items-start pt-12">
+<div class="relative w-72 h-80 bg-stone p-4 pb-12 rounded-lg border border-timber/50 shadow-soft-moss transform -rotate-2 hover:rotate-0 transition-transform duration-500">
+<div class="w-full h-full bg-surface-container-low border border-timber/30 rounded-md flex items-center justify-center overflow-hidden relative">
+<!-- Abstract Placeholder Graphic -->
+<div class="absolute inset-0 bg-gradient-to-br from-primary-fixed-dim/20 to-secondary-fixed-dim/20"></div>
+<div class="w-32 h-32 border-2 border-dashed border-primary/30 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-primary/40">landscape</span>
+</div>
+</div>
+<p class="absolute bottom-4 left-0 w-full text-center font-label-md text-xs text-dried-grass font-mono">fig 1. The Maker</p>
+</div>
+</div>
+<!-- Right Column: Content -->
+<div class="md:col-span-7 flex flex-col gap-16 md:gap-24">
+<!-- Education Section -->
+<section>
+<div class="flex items-center gap-4 mb-8">
+<div class="w-10 h-10 rounded-full bg-primary-container/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">school</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-deep-loam">Education</h2>
+</div>
+<div class="space-y-6">
+<div class="bg-surface rounded-organic-3 p-8 border border-timber/50 shadow-soft-moss hover:-translate-y-1 transition-transform">
+<h3 class="font-label-md text-label-md text-primary font-bold mb-1">MFA Interaction Design</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-2">School of Visual Arts, NY</p>
+<p class="font-body-md text-sm text-dried-grass">2018 — 2020</p>
+</div>
+<div class="bg-stone/50 rounded-2xl p-8 border border-timber/30 ml-4 md:ml-12 hover:-translate-y-1 transition-transform">
+<h3 class="font-label-md text-label-md text-deep-loam font-bold mb-1">BA Philosophy</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-2">University of Kyoto</p>
+<p class="font-body-md text-sm text-dried-grass">2014 — 2018</p>
+</div>
+</div>
+</section>
+<!-- Work Experience Section -->
+<section>
+<div class="flex items-center gap-4 mb-8">
+<div class="w-10 h-10 rounded-full bg-secondary-container/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">work</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-deep-loam">Experience</h2>
+</div>
+<div class="relative pl-6 md:pl-10 border-l border-timber/50 space-y-12">
+<div class="relative">
+<div class="absolute -left-[31px] md:-left-[47px] top-2 w-4 h-4 rounded-full bg-primary border-4 border-surface"></div>
+<div class="bg-surface rounded-tl-3xl rounded-br-3xl rounded-tr-md rounded-bl-md p-8 border border-timber/50 shadow-soft-moss">
+<h3 class="font-label-md text-label-md text-primary font-bold mb-1">Senior Product Designer</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-2">Studio Wabi Sabi</p>
+<p class="font-body-md text-sm text-dried-grass mb-4">2021 — Present</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Leading design systems and organic interface explorations for mindfulness applications.</p>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -left-[29px] md:-left-[45px] top-2 w-3 h-3 rounded-full bg-timber border-2 border-surface"></div>
+<div class="bg-surface-container-low rounded-2xl p-6 border border-timber/30">
+<h3 class="font-label-md text-label-md text-deep-loam font-bold mb-1">UI/UX Designer</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-2">TechFlora</p>
+<p class="font-body-md text-sm text-dried-grass">2019 — 2021</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Hobbies Section -->
+<section>
+<div class="flex items-center gap-4 mb-8">
+<div class="w-10 h-10 rounded-full bg-tertiary-container/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">palette</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-deep-loam">Interests</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+<div class="bg-surface rounded-full py-3 px-6 border border-timber/50 text-center hover:bg-stone transition-colors cursor-default">
+<span class="font-label-md text-label-md text-on-surface-variant">Ceramics</span>
+</div>
+<div class="bg-surface rounded-full py-3 px-6 border border-timber/50 text-center hover:bg-stone transition-colors cursor-default">
+<span class="font-label-md text-label-md text-on-surface-variant">Film Photography</span>
+</div>
+<div class="bg-surface rounded-full py-3 px-6 border border-timber/50 text-center hover:bg-stone transition-colors cursor-default">
+<span class="font-label-md text-label-md text-on-surface-variant">Bouldering</span>
+</div>
+<div class="bg-surface rounded-full py-3 px-6 border border-timber/50 text-center hover:bg-stone transition-colors cursor-default">
+<span class="font-label-md text-label-md text-on-surface-variant">Botany</span>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+</body></html>

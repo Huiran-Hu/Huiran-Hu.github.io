@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Literata", ui-serif, Georgia, serif;
+  --font-body: "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-deep-loam: #2c2c24;
+  --color-on-surface: #1b1c1a;
+  --color-on-surface-variant: #444840;
+  --color-dried-grass: #78786c;
+  --color-bark: #4a4a40;
+  --color-primary: #45573b;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #5d7052;
+  --color-on-primary-container: #ddf3cd;
+  --color-secondary: #81542b;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #ffc38f;
+  --color-on-secondary-container: #794e25;
+  --color-tertiary: #585246;
+  --color-tertiary-container: #716a5e;
+  --color-on-tertiary-container: #f6ebdc;
+  --color-surface: #faf9f5;
+  --color-background: #faf9f5;
+  --color-on-background: #1b1c1a;
+  --color-stone: #f0ebe5;
+  --color-timber: #ded8cf;
+  --color-pale-mist: #f3f4f1;
+  --color-surface-container-low: #f4f4f0;
+  --color-surface-container-high: #e9e8e4;
+  --color-surface-bright: #faf9f5;
+  --color-primary-fixed: #d4e9c4;
+  --color-primary-fixed-dim: #b8cda9;
+  --color-secondary-fixed: #ffdcc1;
+  --color-secondary-fixed-dim: #f6bb88;
+  --color-burnt-sienna: #a85448;
+  --color-outline: #74786f;
+
+  --spacing-gutter: 24px;
+  --spacing-section-padding-mobile: 64px;
+  --spacing-section-padding-desktop: 120px;
+
+  --shadow-moss: 0 10px 40px -10px rgb(93 112 82 / 0.15);
+  --shadow-moss-tight: 0 12px 40px -15px rgb(93 112 82 / 0.15);
+  --shadow-moss-lift: 0 20px 50px -15px rgb(93 112 82 / 0.2);
+  --shadow-clay: 0 10px 40px -10px rgb(193 140 93 / 0.1);
+  --shadow-clay-lift: 0 20px 50px -15px rgb(193 140 93 / 0.15);
+  --shadow-nav: 0 -8px 30px rgb(69 87 59 / 0.08);
+  --shadow-primary-soft: 0 12px 40px -15px rgb(74 74 64 / 0.08);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100%;
+    background-color: #fdfcf8;
+    color: var(--color-deep-loam);
+    font-family: var(--font-body);
+  }
+
+  #root {
+    min-height: 100%;
+  }
+}
+
+/* Global grain (Stitch) */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.04;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+.scanline-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.35;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    transparent 50%,
+    rgb(93 112 82 / 0.03) 50%,
+    rgb(93 112 82 / 0.03)
+  );
+  background-size: 100% 4px;
+}
+
+.nav-glass {
+  background-color: rgb(253 252 248 / 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.blob-1 {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+.blob-2 {
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+}
+
+.blob-3 {
+  border-radius: 50% 50% 30% 70% / 50% 60% 40% 50%;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--color-primary-container);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-link:hover::after,
+.nav-link.is-active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.card-organic-1 {
+  border-radius: 2rem 0.5rem 1.5rem 0.75rem;
+}
+
+.card-organic-2 {
+  border-radius: 0.75rem 2rem 0.5rem 1.5rem;
+}
+
+.card-organic-3 {
+  border-radius: 1.5rem 0.75rem 2rem 0.5rem;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-primary-container);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.material-symbols-outlined[data-fill="1"] {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+}

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Visual Patterns Showcase</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&amp;family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "surface-container-high": "#e9e8e4",
+                "on-tertiary": "#ffffff",
+                "on-error": "#ffffff",
+                "tertiary-fixed": "#ebe1d2",
+                "primary-fixed": "#d4e9c4",
+                "surface-variant": "#e3e2df",
+                "surface-tint": "#516447",
+                "background": "#faf9f5",
+                "tertiary-container": "#716a5e",
+                "error-container": "#ffdad6",
+                "on-error-container": "#93000a",
+                "secondary-fixed-dim": "#f6bb88",
+                "bark": "#4A4A40",
+                "on-primary-fixed-variant": "#3a4c30",
+                "deep-loam": "#2C2C24",
+                "on-surface-variant": "#444840",
+                "on-secondary-fixed-variant": "#663d15",
+                "surface": "#faf9f5",
+                "surface-dim": "#dbdad6",
+                "on-secondary": "#ffffff",
+                "primary": "#45573b",
+                "primary-container": "#5d7052",
+                "dried-grass": "#78786C",
+                "on-surface": "#1b1c1a",
+                "surface-container-highest": "#e3e2df",
+                "timber": "#DED8CF",
+                "surface-container": "#efeeea",
+                "tertiary": "#585246",
+                "surface-bright": "#faf9f5",
+                "tertiary-fixed-dim": "#cfc5b7",
+                "secondary-fixed": "#ffdcc1",
+                "secondary-container": "#ffc38f",
+                "burnt-sienna": "#A85448",
+                "surface-container-low": "#f4f4f0",
+                "on-tertiary-fixed-variant": "#4c463b",
+                "on-primary-fixed": "#0f1f09",
+                "inverse-on-surface": "#f2f1ed",
+                "surface-container-lowest": "#ffffff",
+                "stone": "#F0EBE5",
+                "on-secondary-container": "#794e25",
+                "error": "#ba1a1a",
+                "outline": "#74786f",
+                "on-secondary-fixed": "#2e1500",
+                "primary-fixed-dim": "#b8cda9",
+                "inverse-surface": "#2f312e",
+                "inverse-primary": "#b8cda9",
+                "on-tertiary-container": "#f6ebdc",
+                "secondary": "#81542b",
+                "outline-variant": "#c4c8bd",
+                "on-primary": "#ffffff",
+                "pale-mist": "#F3F4F1",
+                "on-background": "#1b1c1a",
+                "on-tertiary-fixed": "#1f1b12",
+                "on-primary-container": "#ddf3cd"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "unit": "4px",
+                "section-padding-mobile": "64px",
+                "container-max": "1140px",
+                "section-padding-desktop": "120px",
+                "gutter": "24px"
+        },
+        "fontFamily": {
+                "headline-xl-mobile": [
+                        "Literata"
+                ],
+                "headline-md": [
+                        "Literata"
+                ],
+                "body-md": [
+                        "Nunito Sans"
+                ],
+                "headline-xl": [
+                        "Literata"
+                ],
+                "label-md": [
+                        "Nunito Sans"
+                ],
+                "headline-lg": [
+                        "Literata"
+                ],
+                "body-lg": [
+                        "Nunito Sans"
+                ]
+        },
+        "fontSize": {
+                "headline-xl-mobile": [
+                        "36px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "1.3",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-xl": [
+                        "48px",
+                        {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "label-md": [
+                        "14px",
+                        {
+                                "lineHeight": "1.4",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+    /* Grain overlay simulating physical medium */
+    .grain-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        z-index: 9999;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        opacity: 0.04;
+        mix-blend-mode: multiply;
+    }
+    
+    /* Global Background */
+    body {
+        background-color: theme('colors.background');
+        color: theme('colors.on-background');
+    }
+    
+    /* Asymmetric blob shapes */
+    .blob-1 { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    .blob-2 { border-radius: 40% 60% 70% 30% / 50% 60% 30% 60%; }
+    .blob-3 { border-radius: 70% 30% 40% 60% / 30% 70% 50% 50%; }
+    
+    /* Tinted diffused shadows */
+    .shadow-moss {
+        box-shadow: 0 10px 40px -10px rgba(69, 87, 59, 0.08);
+    }
+    .shadow-terracotta {
+        box-shadow: 0 10px 40px -10px rgba(168, 84, 72, 0.08);
+    }
+</style>
+</head>
+<body class="relative min-h-screen overflow-x-hidden font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- Global Noise Texture -->
+<div class="grain-overlay"></div>
+<!-- TopNavBar (Web Only) -->
+<nav class="hidden md:flex fixed top-4 right-4 z-50 items-center gap-6 px-6 py-3 rounded-full max-w-max ml-auto bg-surface/70 backdrop-blur-md border border-timber/50 shadow-xl shadow-primary/5 scale-95 duration-200 ease-in-out">
+<div class="font-headline-md text-headline-md text-on-surface bg-primary rounded-full w-10 h-10 flex items-center justify-center text-white">HH</div>
+<ul class="flex gap-6 font-label-md text-label-md">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Showcase</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Philosophy</a></li>
+<li><a class="text-primary font-bold border-b-2 border-primary pb-1 hover:text-primary transition-colors duration-300" href="#">Patterns</a></li>
+</ul>
+<button class="text-primary hover:text-primary transition-colors duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">settings</span>
+</button>
+</nav>
+<!-- Main Content Canvas -->
+<main class="max-w-container-max mx-auto px-gutter pb-section-padding-mobile md:pb-section-padding-desktop">
+<!-- Hero Section -->
+<section class="pt-32 md:pt-48 pb-section-padding-mobile md:pb-section-padding-desktop flex flex-col items-center justify-center text-center relative">
+<div class="absolute w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-primary-container/20 blob-1 -z-10 blur-3xl opacity-60"></div>
+<div class="relative flex items-center justify-center w-32 h-32 md:w-48 md:h-48 bg-primary-container text-on-primary-container blob-1 mb-8 shadow-moss">
+<span class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl tracking-tight">HH</span>
+</div>
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary mb-6 max-w-2xl">
+                The Geometry of Nature
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto">
+                Exploring the beauty of asymmetry, tactile surfaces, and the deliberate imperfections that define Wabi-sabi digital design.
+            </p>
+</section>
+<!-- Section 1: Organic Containers -->
+<section class="py-16 md:py-24 border-t border-timber/30 relative">
+<div class="absolute -left-20 top-20 w-[400px] h-[400px] bg-secondary-fixed/30 blob-2 -z-10 blur-3xl opacity-40"></div>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-deep-loam mb-12 flex items-center gap-4">
+<span class="w-12 h-1 bg-primary-container"></span>
+                Organic Containers
+            </h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 items-center">
+<!-- Terracotta Blob -->
+<div class="flex flex-col items-center group relative translate-y-4">
+<div class="w-48 h-48 md:w-64 md:h-64 bg-error-container text-on-error-container blob-2 shadow-terracotta flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-105 border border-timber/20">
+<div class="w-24 h-24 border-2 border-burnt-sienna/40 rotate-12 transition-transform duration-700 group-hover:rotate-45"></div>
+</div>
+<span class="font-label-md text-label-md text-tertiary uppercase tracking-widest">Fluid Deviation</span>
+</div>
+<!-- Sand Blob -->
+<div class="flex flex-col items-center group relative -translate-y-8">
+<div class="w-56 h-56 md:w-72 md:h-72 bg-tertiary-fixed text-on-tertiary-fixed blob-3 shadow-moss flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-105 border border-timber/20">
+<div class="w-32 h-32 rounded-full border-2 border-tertiary/30 border-dashed animate-[spin_60s_linear_infinite]"></div>
+</div>
+<span class="font-label-md text-label-md text-tertiary uppercase tracking-widest">Calculated Asymmetry</span>
+</div>
+<!-- Stone Blob -->
+<div class="flex flex-col items-center group relative translate-y-8">
+<div class="w-40 h-40 md:w-56 md:h-56 bg-stone text-on-surface blob-1 shadow-moss flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-105 border border-timber/20">
+<div class="w-16 h-16 border border-primary/50 rotate-[-15deg] transition-transform duration-700 group-hover:rotate-0"></div>
+</div>
+<span class="font-label-md text-label-md text-tertiary uppercase tracking-widest">Textural Imperfection</span>
+</div>
+</div>
+</section>
+<!-- Section 2: Asymmetric Composition -->
+<section class="py-16 md:py-24 mt-16 md:mt-32 border-t border-timber/30">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-deep-loam mb-16 flex items-center gap-4 justify-end">
+                Asymmetric Composition
+                <span class="w-12 h-1 bg-burnt-sienna/60"></span>
+</h2>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 relative">
+<!-- Large Offset Card -->
+<div class="md:col-span-7 bg-surface-container-high rounded-[2rem] rounded-br-none p-8 md:p-12 shadow-moss border border-timber/50 hover:-translate-y-1 transition-transform duration-300 z-10">
+<div class="flex justify-between items-start mb-8">
+<span class="font-label-md text-label-md text-primary bg-primary-fixed-dim/30 px-4 py-1 rounded-full">Composition 01</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 0;">architecture</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-bark mb-4">Embracing the Void</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+                        Negative space is not empty; it is a canvas waiting to breathe. By offsetting elements from rigid grid lines, we create a tension that feels organic and alive.
+                    </p>
+<div class="mt-8 flex gap-4">
+<button class="bg-primary text-pale-mist font-label-md text-label-md px-6 py-3 rounded-full hover:scale-105 active:scale-95 transition-all shadow-moss hover:shadow-[0_15px_40px_-10px_rgba(69,87,59,0.2)]">
+                            Explore Pattern
+                        </button>
+</div>
+</div>
+<!-- Floating Polaroid 1 -->
+<div class="md:col-span-4 md:col-start-9 mt-8 md:-mt-12 bg-stone p-4 pb-12 rounded-sm shadow-terracotta border border-timber/40 rotate-2 hover:rotate-0 transition-transform duration-500 flex flex-col justify-between h-[300px]">
+<div class="w-full h-full bg-surface-variant/50 flex items-center justify-center border border-timber/20 overflow-hidden relative">
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-timber/20 via-transparent to-transparent"></div>
+<div class="w-20 h-[1px] bg-outline-variant rotate-45 absolute top-10 left-10"></div>
+<div class="w-20 h-[1px] bg-outline-variant -rotate-45 absolute bottom-10 right-10"></div>
+</div>
+<div class="pt-4 text-center">
+<span class="font-label-md text-label-md text-dried-grass font-medium">Study in Balance, 2024</span>
+</div>
+</div>
+<!-- Floating Polaroid 2 -->
+<div class="hidden md:block absolute -bottom-16 left-12 w-64 bg-surface p-3 pb-10 rounded-sm shadow-moss border border-timber/30 -rotate-3 hover:-rotate-1 transition-transform duration-500 z-0">
+<div class="w-full h-40 bg-tertiary-container/10 flex items-center justify-center border border-timber/20">
+<div class="w-12 h-12 bg-primary/20 rounded-full blur-sm"></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-surface border-t border-timber/30 shadow-[0_-8px_30px_rgb(69,87,59,0.08)] rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-all p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">eco</span>
+<span class="font-label-md text-label-md text-[10px]">Nature</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-all p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">category</span>
+<span class="font-label-md text-label-md text-[10px]">Asymmetry</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-6 py-2 hover:bg-surface-container-high transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">architecture</span>
+<span class="font-label-md text-label-md text-[10px]">Craft</span>
+</a>
+</nav>
+</body></html>

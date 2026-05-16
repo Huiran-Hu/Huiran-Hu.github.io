@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HH Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&amp;family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-primary": "#b8cda9",
+                        "on-secondary-fixed": "#2e1500",
+                        "secondary-fixed-dim": "#f6bb88",
+                        "stone": "#F0EBE5",
+                        "on-primary-container": "#ddf3cd",
+                        "primary-fixed": "#d4e9c4",
+                        "secondary-fixed": "#ffdcc1",
+                        "deep-loam": "#2C2C24",
+                        "burnt-sienna": "#A85448",
+                        "bark": "#4A4A40",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#0f1f09",
+                        "inverse-surface": "#2f312e",
+                        "tertiary": "#585246",
+                        "surface-container": "#efeeea",
+                        "on-tertiary-container": "#f6ebdc",
+                        "on-secondary-fixed-variant": "#663d15",
+                        "tertiary-fixed-dim": "#cfc5b7",
+                        "secondary-container": "#ffc38f",
+                        "on-tertiary-fixed": "#1f1b12",
+                        "surface-dim": "#dbdad6",
+                        "surface": "#faf9f5",
+                        "pale-mist": "#F3F4F1",
+                        "timber": "#DED8CF",
+                        "tertiary-container": "#716a5e",
+                        "secondary": "#81542b",
+                        "outline-variant": "#c4c8bd",
+                        "surface-container-high": "#e9e8e4",
+                        "primary": "#45573b",
+                        "surface-bright": "#faf9f5",
+                        "background": "#faf9f5",
+                        "dried-grass": "#78786C",
+                        "on-surface": "#1b1c1a",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ebe1d2",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#4c463b",
+                        "on-primary-fixed-variant": "#3a4c30",
+                        "surface-variant": "#e3e2df",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f4f4f0",
+                        "primary-container": "#5d7052",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#794e25",
+                        "surface-container-highest": "#e3e2df",
+                        "outline": "#74786f",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-surface-variant": "#444840",
+                        "surface-tint": "#516447",
+                        "primary-fixed-dim": "#b8cda9",
+                        "inverse-on-surface": "#f2f1ed",
+                        "on-background": "#1b1c1a"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        "section-padding-desktop": "120px",
+                        unit: "4px",
+                        "section-padding-mobile": "64px",
+                        gutter: "24px",
+                        "container-max": "1140px"
+                    },
+                    fontFamily: {
+                        "headline-lg": ["Fraunces", "serif"],
+                        "headline-xl-mobile": ["Fraunces", "serif"],
+                        "headline-xl": ["Fraunces", "serif"],
+                        "body-lg": ["Nunito Sans", "sans-serif"],
+                        "label-md": ["Nunito Sans", "sans-serif"],
+                        "headline-md": ["Fraunces", "serif"],
+                        "body-md": ["Nunito Sans", "sans-serif"]
+                    },
+                    fontSize: {
+                        "headline-lg": ["32px", { lineHeight: "1.2", fontWeight: "600" }],
+                        "headline-xl-mobile": ["36px", { lineHeight: "1.2", fontWeight: "700" }],
+                        "headline-xl": ["48px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "label-md": ["14px", { lineHeight: "1.4", letterSpacing: "0.05em", fontWeight: "600" }],
+                        "headline-md": ["24px", { lineHeight: "1.3", fontWeight: "600" }],
+                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #FDFCF8;
+        }
+        
+        /* Global Noise Texture */
+        .noise-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.04;
+            mix-blend-mode: multiply;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* Organic Blob Shapes */
+        .blob-1 {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+        .blob-2 {
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+        }
+        .blob-3 {
+            border-radius: 50% 50% 30% 70% / 50% 60% 40% 50%;
+        }
+
+        /* Soft Tinted Shadows */
+        .shadow-moss {
+            box-shadow: 0 10px 40px -10px rgba(93, 112, 82, 0.15);
+        }
+        .shadow-terracotta {
+            box-shadow: 0 10px 40px -10px rgba(193, 140, 93, 0.15);
+        }
+
+        /* Scanline / CRT wipe motif for section transitions (simulated via subtle repeating linear gradient over background blobs) */
+        .scanline-bg {
+             background: repeating-linear-gradient(
+                to bottom,
+                transparent,
+                transparent 2px,
+                rgba(0,0,0,0.01) 2px,
+                rgba(0,0,0,0.01) 4px
+            );
+        }
+
+        /* Nav Glassmorphism Override for extra organic feel */
+        .nav-glass {
+            background-color: rgba(253, 252, 248, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        /* Custom underline animation for nav links */
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #5D7052; /* moss green */
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+        .nav-link:hover::after, .nav-link.active::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        /* Focus rings */
+        *:focus-visible {
+            outline: 2px solid #5D7052;
+            outline-offset: 4px;
+            border-radius: 4px;
+        }
+
+        /* Ensure material icons use FILL where needed */
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="text-deep-loam font-body-md relative overflow-x-hidden antialiased">
+<!-- Global Texture Overlay -->
+<div class="noise-overlay"></div>
+<!-- Ambient Background Blobs -->
+<div class="fixed top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-primary-fixed/20 blur-[100px] -z-10 mix-blend-multiply"></div>
+<div class="fixed bottom-[-10%] right-[-10%] w-[60vw] h-[60vw] rounded-full bg-secondary-fixed/20 blur-[120px] -z-10 mix-blend-multiply"></div>
+<!-- Navigation (TopNavBar mapped style) -->
+<nav class="hidden md:flex fixed top-4 right-4 z-50 items-center gap-6 px-6 py-3 rounded-full max-w-max ml-auto nav-glass border border-timber/50 shadow-moss">
+<div class="font-headline-md text-headline-md text-on-primary bg-primary rounded-full w-10 h-10 flex items-center justify-center blob-1">HH</div>
+<div class="flex gap-6 items-center">
+<a class="relative nav-link active font-label-md text-label-md text-primary font-bold" href="#home">Home</a>
+<a class="relative nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#about">About</a>
+<a class="relative nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#works">Works</a>
+</div>
+</nav>
+<!-- Mobile Nav (BottomNavBar mapped style for mobile priority, though prompt requested top bar, adapting to system constraints: Top row text links banned on mobile, BottomNavBar required) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-surface border-t border-timber/30 shadow-[0_-8px_30px_rgb(69,87,59,0.08)] rounded-t-xl">
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-6 py-2 scale-95 transition-transform" href="#home">
+<span class="material-symbols-outlined mb-1" data-weight="fill">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-all rounded-full px-4 py-2" href="#about">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-label-md text-label-md">About</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-all rounded-full px-4 py-2" href="#works">
+<span class="material-symbols-outlined mb-1">work</span>
+<span class="font-label-md text-label-md">Works</span>
+</a>
+</nav>
+<main class="relative z-10">
+<!-- SECTION: Home -->
+<section class="min-h-[921px] flex flex-col justify-center px-gutter md:px-section-padding-desktop py-section-padding-mobile md:py-section-padding-desktop max-w-container-max mx-auto relative scanline-bg" id="home">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<!-- Visual / Monogram column -->
+<div class="col-span-1 md:col-span-5 flex justify-center md:justify-start mb-12 md:mb-0">
+<div class="w-64 h-64 md:w-80 md:h-80 bg-primary flex items-center justify-center text-on-primary blob-1 shadow-moss transform rotate-[-2deg] hover:scale-105 transition-transform duration-700 ease-out">
+<span class="font-headline-xl-mobile md:font-headline-xl text-[80px] md:text-[120px] tracking-tighter">HH</span>
+</div>
+</div>
+<!-- Copy column -->
+<div class="col-span-1 md:col-span-7 flex flex-col items-start space-y-8">
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-deep-loam leading-tight max-w-2xl">
+                        Hi, I’m <span class="text-primary italic font-light">Hunter</span>, a designer focused on organic textures and digital craft.
+                    </h1>
+<p class="font-body-lg text-body-lg text-dried-grass max-w-xl">
+                        I believe in building interfaces that feel less like software and more like physical spaces. Welcome to my digital garden.
+                    </p>
+<!-- Contact Strip -->
+<div class="flex flex-wrap items-center gap-6 pt-4 mt-4 border-t border-timber/50 w-full max-w-lg">
+<a class="flex items-center gap-2 group p-2 -ml-2 rounded-lg hover:bg-stone transition-colors" href="#">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">chat</span>
+<span class="font-label-md text-label-md text-bark group-hover:text-primary">WeChat</span>
+</a>
+<a class="flex items-center gap-2 group p-2 rounded-lg hover:bg-stone transition-colors" href="#">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">code</span>
+<span class="font-label-md text-label-md text-bark group-hover:text-primary">GitHub</span>
+</a>
+<a class="flex items-center gap-2 group p-2 rounded-lg hover:bg-stone transition-colors" href="#">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">mail</span>
+<span class="font-label-md text-label-md text-bark group-hover:text-primary">Email</span>
+</a>
+<a class="flex items-center gap-2 group p-2 rounded-lg hover:bg-stone transition-colors" href="#">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">work_outline</span>
+<span class="font-label-md text-label-md text-bark group-hover:text-primary">LinkedIn</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+</body></html>
